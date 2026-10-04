@@ -8,7 +8,7 @@ export default function DashboardLayout({
   return (
     <>
       <Navigation />
-      <div style={{ paddingTop: '80px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ paddingTop: '96px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {children}
       </div>
     </>

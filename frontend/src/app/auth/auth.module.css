@@ -1,0 +1,221 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, rgba(5, 5, 7, 1) 70%);
+  position: relative;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(18, 18, 22, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 175, 55, 0.1);
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.logoAccent {
+  color: var(--accent-primary, #d4af37);
+}
+
+.tagline {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-primary, #d4af37);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #a1a1aa);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Guest Pass Box */
+.guestBox {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.04) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+.guestBadge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-primary, #d4af37);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.guestBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #d4af37 0%, #b8972e 100%);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  margin-bottom: 8px;
+}
+
+.guestBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f2ce55 0%, #d4af37 100%);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+
+.guestDesc {
+  font-size: 0.775rem;
+  color: #d4d4d8;
+  line-height: 1.4;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.dividerText {
+  padding: 0 12px;
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary, #a1a1aa);
+  font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 4px;
+  margin-bottom: 22px;
+}
+
+.tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, #a1a1aa);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #fff;
+}
+
+.activeTab {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary, #a1a1aa);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input:focus {
+  border-color: var(--accent-primary, #d4af37);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.submitBtn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 8px;
+}
+
+.submitBtn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.tip {
+  font-size: 0.775rem;
+  color: var(--text-secondary, #a1a1aa);
+  margin-top: 18px;
+}

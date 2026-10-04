@@ -32,14 +32,15 @@ Server will run on [http://localhost:3000](http://localhost:3000).
 
 ## 📂 Project Structure
 
-* `src/app/` — Next.js App Router (Landing Page, Layout, Global Styles)
+* `src/app/` — Next.js App Router (Landing Page, Layout, Global Styles, `/auth` Access Portal)
 * `src/app/(dashboard)/` — Core platform routes:
-  * `/profile` — Client taste & silhouette configuration
+  * `/dashboard` — Executive Sartorial Command Center
   * `/wardrobe` — The Digital Atelier closet manager
   * `/outfits` — Contextual AI styling and generation
   * `/discover` — Lookbooks and capsule collections
+  * `/profile` — Client taste & silhouette architecture
 * `src/components/` — Modular UI components (Navigation, cards, widgets, LanguageSwitcher)
-* `src/context/` — React Contexts (LanguageContext with auto-detection & persistence)
+* `src/context/` — React Contexts (LanguageContext & AuthContext with Guest Mode support)
 * `src/translations/` — Bilingual dictionaries (English & French)
 * `public/images/` — Editorial photography assets
 

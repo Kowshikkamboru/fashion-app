@@ -26,7 +26,7 @@ export default function Home() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <LanguageSwitcher />
-            <Link href="/profile" className={styles.navBtn}>
+            <Link href="/auth" className={styles.navBtn}>
               {t.nav.enterAtelier}
             </Link>
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
           <p className={styles.sectionText}>
             {t.clients.p2}
           </p>
-          <Link href="/profile" className={styles.linkBtn}>{t.clients.cta} &rarr;</Link>
+          <Link href="/auth" className={styles.linkBtn}>{t.clients.cta} &rarr;</Link>
         </div>
       </section>
       
