@@ -38,8 +38,19 @@ Server will run on [http://localhost:3000](http://localhost:3000).
   * `/wardrobe` — The Digital Atelier closet manager
   * `/outfits` — Contextual AI styling and generation
   * `/discover` — Lookbooks and capsule collections
-* `src/components/` — Modular UI components (Navigation, cards, widgets)
+* `src/components/` — Modular UI components (Navigation, cards, widgets, LanguageSwitcher)
+* `src/context/` — React Contexts (LanguageContext with auto-detection & persistence)
+* `src/translations/` — Bilingual dictionaries (English & French)
 * `public/images/` — Editorial photography assets
+
+---
+
+## 🌐 Localization & Regional Detection
+
+* **Default Language Strategy:** 
+  * If the user accesses the platform from **France** (detected via browser locale `fr`, Paris timezone `Europe/Paris`, or geo-IP `FR`), the platform defaults to **Français (`FR`)**.
+  * For all other international regions, the platform defaults to **English (`EN`)**.
+* **Manual Switcher:** A sleek glassmorphic pill switcher `[ EN | FR ]` is embedded in the navigation bar. User preferences are persisted in `localStorage`.
 
 ---
 

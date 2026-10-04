@@ -1,17 +1,20 @@
 "use client";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/context/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import styles from './Navigation.module.css';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   const links = [
-    { name: 'Home', href: '/' },
-    { name: 'Profile', href: '/profile' },
-    { name: 'Wardrobe', href: '/wardrobe' },
-    { name: 'Outfits', href: '/outfits' },
-    { name: 'Discover', href: '/discover' },
+    { name: t.nav.home, href: '/' },
+    { name: t.nav.profile, href: '/profile' },
+    { name: t.nav.wardrobe, href: '/wardrobe' },
+    { name: t.nav.outfits, href: '/outfits' },
+    { name: t.nav.discover, href: '/discover' },
   ];
 
   return (
@@ -23,13 +26,14 @@ export default function Navigation() {
         <div className={styles.links}>
           {links.map((link) => (
             <Link 
-              key={link.name} 
+              key={link.href} 
               href={link.href}
               className={`${styles.link} ${pathname === link.href ? styles.active : ''}`}
             >
               {link.name}
             </Link>
           ))}
+          <LanguageSwitcher />
         </div>
       </div>
     </nav>

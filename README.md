@@ -43,6 +43,7 @@ VASTRIÉ is built on the belief that dressing well is not about fleeting micro-t
 2. **Contextual AI Stylist (`/outfits`):** Real-time outfit composition driven by weather/climate parameters (e.g., Summer 75°F+, Spring Trans, Crisp Autumn), event formality, and color theory.
 3. **Style Profile & Biometrics (`/profile`):** Comprehensive taste, fit preference, body silhouette, and lifestyle mapping.
 4. **Curated Discovery (`/discover`):** Editorial-grade lookbooks and capsule wardrobe inspirations.
+5. **Intelligent Localization & Regional Detection:** Auto-detects user region to default to French (`FR`) for access from France and English (`EN`) for all other international regions, accompanied by an interactive luxury `[ EN | FR ]` switcher.
 
 ---
 
