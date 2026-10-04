@@ -1,0 +1,144 @@
+.main {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  animation: fadeIn 0.5s ease;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.gapAnalysis {
+  background: var(--bg-glass);
+  border: 1px solid var(--ai-glow);
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 64px;
+}
+
+.gapHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.gapTitle {
+  font-size: 1.25rem;
+  color: var(--ai-primary);
+}
+
+.aiBadge {
+  background: var(--ai-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.gapText {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.productCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-glow);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #000;
+}
+
+.matchScore {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent-primary);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  z-index: 10;
+}
+
+.productInfo {
+  padding: 24px;
+}
+
+.productBrand {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.productName {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.buyBtn {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.buyBtn:hover {
+  background: var(--accent-primary);
+  color: #000;
+}
