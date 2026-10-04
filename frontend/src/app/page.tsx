@@ -15,7 +15,7 @@ export default function Home() {
       <nav className={styles.nav}>
         <div className={styles.navContainer}>
           <div className={styles.logo}>
-            INNOV<span className={styles.logoAccent}>YASA</span>
+            VASTR<span className={styles.logoAccent}>IÉ</span>
           </div>
           <div className={styles.navLinks}>
             <a href="#story" className={styles.navLink}>Our Story</a>
@@ -29,17 +29,15 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroImageWrapper}>
-          <Image 
-            src="/images/editorial_hero_1791120796342.jpg" 
-            alt="Premium Men's Fashion in Paris" 
-            fill 
-            priority
-            style={{ objectFit: 'cover', filter: 'brightness(0.6)' }}
-          />
-          <div className={styles.heroOverlay}></div>
-        </div>
+      <section 
+        className={styles.hero}
+        style={{
+          backgroundImage: 'url(/images/editorial_hero_1791120796342.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 20%'
+        }}
+      >
+        <div className={styles.heroOverlay}></div>
         
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent}>
@@ -96,19 +94,13 @@ export default function Home() {
 
       {/* Our Story Section */}
       <section id="story" className={styles.sectionSplit}>
-        <div className={styles.splitImage}>
-          <Image 
-            src="/images/story_image_1791120813277.jpg" 
-            alt="Artisan Tailor" 
-            fill 
-            style={{ objectFit: 'cover' }}
-          />
+        <div className={styles.splitImage} style={{ backgroundImage: 'url(/images/story_image_1791120813277.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         </div>
         <div className={styles.splitContent}>
           <h4 className={styles.sectionLabel}>Our Heritage</h4>
           <h2 className={styles.sectionTitle}>Craftsmanship meets computation.</h2>
           <p className={styles.sectionText}>
-            At Innovyasa, we believe that true style is a combination of timeless rules and personal expression. We studied the grand tailors of Savile Row and Milan to understand the geometry of fit, the harmony of color, and the language of fabric.
+            At Vastrié, we believe that true style is a combination of timeless rules and personal expression. We studied the grand tailors of Savile Row and Milan to understand the geometry of fit, the harmony of color, and the language of fabric.
           </p>
           <p className={styles.sectionText}>
             We then encoded this knowledge into a proprietary Fashion Knowledge Graph. We aren't just an app; we are your dedicated digital stylist, preserving the intimacy of bespoke tailoring while leveraging the scale of AI.
@@ -154,13 +146,7 @@ export default function Home() {
 
       {/* Who We Help Section */}
       <section id="who-we-help" className={styles.sectionSplitReverse}>
-        <div className={styles.splitImage}>
-          <Image 
-            src="/images/who_we_help_1791120827211.jpg" 
-            alt="Modern Professional" 
-            fill 
-            style={{ objectFit: 'cover' }}
-          />
+        <div className={styles.splitImage} style={{ backgroundImage: 'url(/images/who_we_help_1791120827211.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         </div>
         <div className={styles.splitContent}>
           <h4 className={styles.sectionLabel}>Our Clients</h4>
@@ -178,8 +164,8 @@ export default function Home() {
       {/* Footer */}
       <footer className={styles.footer}>
         <div className="container">
-          <div className={styles.footerLogo}>INNOVYASA</div>
-          <p className={styles.footerText}>© 2026 Innovyasa Technologies. The Future of Personal Styling.</p>
+          <div className={styles.footerLogo}>VASTRIÉ</div>
+          <p className={styles.footerText}>© 2026 Vastrié. The Future of Personal Styling.</p>
         </div>
       </footer>
     </main>
