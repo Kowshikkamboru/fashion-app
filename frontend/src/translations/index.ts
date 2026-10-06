@@ -4,7 +4,7 @@ export const translations = {
   en: {
     nav: {
       story: "Our Story",
-      expertise: "Expertise",
+      expertise: "Features",
       clients: "Clients",
       enterAtelier: "Enter the Atelier",
       home: "Home",
@@ -122,54 +122,78 @@ export const translations = {
       statusBadge: "VIP Atelier Client • 96% Sartorial Accuracy",
       sections: {
         physique: {
-          title: "1. The Tailor's Geometry (Silhouette)",
+          title: "1. Form & Silhouette",
           desc: "Anatomical proportions determine the drape, shoulder line, and lapel width.",
           bodyTypes: {
             athletic: { name: "Athletic V-Taper", desc: "Broader chest & shoulders, tapered waist. Unstructured soft shoulder." },
             slim: { name: "Slim Architectural", desc: "Linear silhouette, slender frame. Clean lines and fitted waist." },
             broad: { name: "Broad Classical", desc: "Fuller physique. Structured Savile Row drape and generous lapel." },
+            tailored: { name: "Tailored Proportions", desc: "Balanced frame. Ideal for modern structured cuts and versatile draping." },
           },
           tailoringCuts: {
             label: "Preferred Tailoring Cut",
             neapolitan: "Neapolitan Soft Shoulder",
             savile: "Savile Row Structured",
             milanese: "Milanese Fluid Modern",
+            parisian: "Parisian Architectural",
           },
         },
         chromatic: {
-          title: "2. Chromatic Analysis (Undertone & Harmony)",
+          title: "2. Chromatic & Tonal Analysis",
           desc: "Harmonizing fabric pigments with your complexion's natural melanin undertones.",
           tones: {
             olive: { name: "Warm Olive", harmony: "Navy, Sand, Forest Green, Terracotta" },
             alabaster: { name: "Cool Alabaster", harmony: "Slate Grey, Ice Blue, Charcoal, Deep Claret" },
             bronze: { name: "Deep Rich Bronze", harmony: "Camel, Crisp White, Emerald, Royal Navy" },
             honey: { name: "Golden Honey", harmony: "Warm Cream, Chocolate, Sage, Cognac" },
+            ebony: { name: "Striking Ebony", harmony: "Jewel Tones, Stark White, Deep Burgundy, Onyx" },
           },
         },
         archetype: {
-          title: "3. Aesthetic Archetype (The Sartorial Signature)",
+          title: "3. The Sartorial Signature",
           desc: "The psychological foundation and cultural expression of your wardrobe.",
           types: {
             sprezzatura: { name: "Riviera Sprezzatura", desc: "Effortless Italian nonchalance. Deconstructed linen, unbuttoned popover, woven calfskin." },
             savile: { name: "Savile Row Executive", desc: "Impeccable British tailoring. Double-breasted high-twist wool, razor-sharp creases." },
             quietLuxury: { name: "Quiet Luxury Minimalist", desc: "Discreet aristocratic refinement. Ultra-fine cashmere, raw Japanese selvedge, supple suede." },
             vanguard: { name: "Contemporary Vanguard", desc: "Architectural modernism. High monochrome contrasts, tactile layering, sculpted silhouettes." },
+            avantGarde: { name: "Avant-Garde Noir", desc: "Dark, moody, and experimental. Asymmetrical cuts, heavy draping, and distressed textures." },
           },
         },
         environment: {
-          title: "4. Context & Environment",
+          title: "4. Contextual Environment",
           desc: "Adapting fabric weights and thermal breathing to your day-to-day rhythm.",
           climates: {
             label: "Primary Climate",
             temperate: "Mild & Temperate (55-75°F)",
             mediterranean: "Warm Mediterranean (75°F+)",
             crisp: "Crisp Alpine & Cold (Below 55°F)",
+            tropical: "Tropical Humidity (85°F+)",
           },
           settings: {
             label: "Daily Environment",
             executive: "Executive Boardroom",
             creative: "Creative Studio & Atelier",
             traveler: "Global Jetsetter / Nomad",
+            gala: "Evening & Gala Events",
+          },
+        },
+        accoutrements: {
+          title: "5. Accoutrements & Footwear",
+          desc: "The defining details: from leather goods to horology.",
+          footwear: {
+            label: "Footwear Foundation",
+            oxford: "Classic Oxfords & Derbies",
+            loafer: "Suede & Leather Loafers",
+            boot: "Chelsea & Chukka Boots",
+            sneaker: "Minimalist Luxury Sneakers",
+          },
+          accessories: {
+            label: "Timepieces & Details",
+            vintage: "Vintage Horology & Signet Rings",
+            modern: "Modern Minimalist Steel",
+            bold: "Statement & Complication Watches",
+            none: "Purist (No Accessories)",
           },
         },
       },
@@ -276,7 +300,7 @@ export const translations = {
   fr: {
     nav: {
       story: "Notre Histoire",
-      expertise: "Expertise",
+      expertise: "Services",
       clients: "Clients",
       enterAtelier: "Entrer dans l'Atelier",
       home: "Accueil",
@@ -394,54 +418,78 @@ export const translations = {
       statusBadge: "Client Privilégié • Précision Sartoriale 96%",
       sections: {
         physique: {
-          title: "1. La Géométrie du Maître-Tailleur (Silhouette)",
+          title: "1. Forme & Silhouette",
           desc: "Les proportions anatomiques dictent le tombé du tissu, la ligne d'épaule et l'ampleur du revers.",
           bodyTypes: {
             athletic: { name: "Athlétique en V", desc: "Épaules et torse développés, taille cintrée. Épaule napolitaine souple sans padding." },
             slim: { name: "Élancé & Architectural", desc: "Silhouette longiligne. Lignes épurées, cintrage précis et proportions affûtées." },
             broad: { name: "Classique Imposant", desc: "Carrure généreuse. Coupe Savile Row structurée et revers généreux." },
+            tailored: { name: "Proportions Sur-Mesure", desc: "Carrure équilibrée. Idéal pour des coupes structurées modernes et un drapé polyvalent." },
           },
           tailoringCuts: {
             label: "Coupe Tailleur Privilégiée",
             neapolitan: "Épaule Napolitaine Souple",
             savile: "Structure Savile Row Britannique",
             milanese: "Modernité Fluide Milanaise",
+            parisian: "Architecture Parisienne",
           },
         },
         chromatic: {
-          title: "2. Analyse Chromatique (Carnation & Harmonie)",
+          title: "2. Analyse Chromatique & Tonale",
           desc: "Harmonisation des pigments textiles avec les sous-tons naturels de votre carnation.",
           tones: {
             olive: { name: "Olive Chaud", harmony: "Bleu Nuit, Sable, Vert Forêt, Terre Cuite" },
             alabaster: { name: "Albâtre Frais", harmony: "Gris Ardoise, Bleu Glacier, Anthracite, Bordeaux" },
             bronze: { name: "Bronze Profond", harmony: "Camel, Blanc Éclatant, Émeraude, Bleu Royal" },
             honey: { name: "Ambre Doré", harmony: "Crème Solaire, Chocolat, Sauge, Cognac" },
+            ebony: { name: "Ébène Saisissant", harmony: "Tons Joyaux, Blanc Pur, Bordeaux Profond, Onyx" },
           },
         },
         archetype: {
-          title: "3. Archétype Esthétique (La Signature Sartoriale)",
+          title: "3. La Signature Sartoriale",
           desc: "Le fondement stylistique et l'expression culturelle de votre vestiaire.",
           types: {
             sprezzatura: { name: "Sprezzatura Riviera", desc: "Nonchalance italienne maîtrisée. Lin déstructuré, chemise popover, cuir tressé." },
             savile: { name: "Exécutif Savile Row", desc: "Rigueur aristocratique britannique. Costume croisé en laine haute torsion." },
             quietLuxury: { name: "Luxe Discret & Épuré", desc: "Raffinement sans ostentation. Cachemire noble, denim selvedge japonais, veau velours." },
             vanguard: { name: "Avant-Garde Moderne", desc: "Modernisme architectural. Contrastes monochromes forts et superposition sculptée." },
+            avantGarde: { name: "Noir Avant-Garde", desc: "Sombre, texturé et expérimental. Coupes asymétriques, drapés lourds et finitions vieillies." },
           },
         },
         environment: {
-          title: "4. Contexte & Environnement",
+          title: "4. Environnement Contextuel",
           desc: "Adaptation du grammage des étoffes et de la respirabilité à votre quotidien.",
           climates: {
             label: "Climat Principal",
             temperate: "Tempéré & Modéré (13-24°C)",
             mediterranean: "Méditerranéen Chaud (24°C+)",
             crisp: "Frais & Alpin (Moins de 13°C)",
+            tropical: "Humidité Tropicale (29°C+)",
           },
           settings: {
             label: "Cadre Quotidien",
             executive: "Conseil d'Administration",
             creative: "Studio Créatif & Atelier",
             traveler: "Voyageur Cosmopolite",
+            gala: "Événements & Galas",
+          },
+        },
+        accoutrements: {
+          title: "5. Souliers & Accessoires",
+          desc: "Les détails qui définissent : de la maroquinerie à l'horlogerie.",
+          footwear: {
+            label: "Fondation des Souliers",
+            oxford: "Oxfords & Derbies Classiques",
+            loafer: "Mocassins en Cuir & Velours",
+            boot: "Bottines Chelsea & Chukka",
+            sneaker: "Sneakers Minimalistes de Luxe",
+          },
+          accessories: {
+            label: "Horlogerie & Détails",
+            vintage: "Horlogerie Vintage & Chevalières",
+            modern: "Acier Minimaliste Moderne",
+            bold: "Montres à Complication & Déclaration",
+            none: "Puriste (Sans Accessoires)",
           },
         },
       },

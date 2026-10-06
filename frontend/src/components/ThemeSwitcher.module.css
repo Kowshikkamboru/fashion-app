@@ -1,0 +1,32 @@
+.switcherContainer {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 0px;
+  padding: 3px;
+  box-shadow: none;
+}
+
+.themeBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-radius: 0px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeBtn:hover {
+  background: transparent;
+  color: var(--text-primary);
+  transform: none;
+}

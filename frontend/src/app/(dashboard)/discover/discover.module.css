@@ -22,7 +22,7 @@
   background: var(--bg-glass);
   border: 1px solid var(--ai-glow);
   padding: 32px;
-  border-radius: 16px;
+  border-radius: 2px;
   margin-bottom: 64px;
 }
 
@@ -40,7 +40,7 @@
 
 .aiBadge {
   background: var(--ai-primary);
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.75rem;
   padding: 4px 8px;
   border-radius: 4px;
@@ -68,7 +68,7 @@
 .productCard {
   background: var(--bg-secondary);
   border: 1px solid var(--bg-glass-border);
-  border-radius: 16px;
+  border-radius: 2px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -92,7 +92,7 @@
   background: var(--accent-primary);
   color: #000;
   padding: 4px 12px;
-  border-radius: 12px;
+  border-radius: 2px;
   font-weight: 700;
   font-size: 0.875rem;
   z-index: 10;
@@ -132,7 +132,7 @@
   color: var(--accent-primary);
   border: 1px solid var(--accent-primary);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 2px;
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition-smooth);

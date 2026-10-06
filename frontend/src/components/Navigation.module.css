@@ -3,10 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(5, 5, 7, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--bg-glass-border);
   z-index: 1000;
   height: 80px;
   display: flex;
@@ -54,4 +53,41 @@
 
 .active {
   color: var(--accent-primary);
+}
+
+.notificationBtn {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  transition: opacity 0.2s ease;
+}
+
+.notificationBtn:hover {
+  opacity: 0.8;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background-color: #ef4444; /* Error/Alert color per checklist */
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  height: 16px;
+  min-width: 16px;
+  padding: 0 4px;
+  border-radius: 8px; /* Pill shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-primary); /* Outline for contrast */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }

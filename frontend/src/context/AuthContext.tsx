@@ -23,18 +23,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const saved = localStorage.getItem('vastrie_user');
     if (saved) {
       try {
         setUser(JSON.parse(saved));
       } catch {
-        // Fallback default
-        setUser({ name: 'Guest Client', email: '', isGuest: true });
+        setUser(null);
       }
-    } else {
-      // By default start with guest mode so user can browse smoothly
-      setUser({ name: 'Guest Client', email: '', isGuest: true });
     }
   }, []);
 

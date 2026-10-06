@@ -5,18 +5,21 @@ import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import styles from './profile.module.css';
 
-type BodyType = 'athletic' | 'slim' | 'broad';
-type TailoringCut = 'neapolitan' | 'savile' | 'milanese';
-type Tone = 'olive' | 'alabaster' | 'bronze' | 'honey';
-type Archetype = 'sprezzatura' | 'savile' | 'quietLuxury' | 'vanguard';
-type Climate = 'temperate' | 'mediterranean' | 'crisp';
-type Setting = 'executive' | 'creative' | 'traveler';
+type BodyType = 'athletic' | 'slim' | 'broad' | 'tailored';
+type TailoringCut = 'neapolitan' | 'savile' | 'milanese' | 'parisian';
+type Tone = 'olive' | 'alabaster' | 'bronze' | 'honey' | 'ebony';
+type Archetype = 'sprezzatura' | 'savile' | 'quietLuxury' | 'vanguard' | 'avantGarde';
+type Climate = 'temperate' | 'mediterranean' | 'crisp' | 'tropical';
+type Setting = 'executive' | 'creative' | 'traveler' | 'gala';
+type Footwear = 'oxford' | 'loafer' | 'boot' | 'sneaker';
+type Accessory = 'vintage' | 'modern' | 'bold' | 'none';
 
 const TONE_SWATCHES: Record<Tone, { hex: string; palette: string[] }> = {
   olive: { hex: '#c89658', palette: ['#1b2a47', '#dfd5c6', '#2d4a3e', '#a0522d'] },
   alabaster: { hex: '#f8dcd0', palette: ['#505b68', '#a0c4d8', '#23272a', '#6b1d2f'] },
   bronze: { hex: '#8c5836', palette: ['#c19a6b', '#f5f5f7', '#097969', '#00205b'] },
   honey: { hex: '#dca873', palette: ['#f5ebd7', '#3d2314', '#708238', '#9e472a'] },
+  ebony: { hex: '#4a2f24', palette: ['#000000', '#ffffff', '#6b1d2f', '#2a2a2a'] },
 };
 
 export default function ProfilePage() {
@@ -29,6 +32,8 @@ export default function ProfilePage() {
   const [archetype, setArchetype] = useState<Archetype>('sprezzatura');
   const [climate, setClimate] = useState<Climate>('mediterranean');
   const [setting, setSetting] = useState<Setting>('creative');
+  const [footwear, setFootwear] = useState<Footwear>('loafer');
+  const [accessory, setAccessory] = useState<Accessory>('vintage');
 
   // Cohesion Score Logic
   const getCohesionScore = () => {
@@ -71,7 +76,7 @@ export default function ProfilePage() {
             </div>
 
             <div className={styles.typeGrid}>
-              {(['athletic', 'slim', 'broad'] as BodyType[]).map((type) => {
+              {(['athletic', 'slim', 'broad', 'tailored'] as BodyType[]).map((type) => {
                 const info = p.sections.physique.bodyTypes[type];
                 const isActive = bodyType === type;
                 return (
@@ -94,7 +99,7 @@ export default function ProfilePage() {
             <div className={styles.subGroup}>
               <label className={styles.subLabel}>{p.sections.physique.tailoringCuts.label}</label>
               <div className={styles.pillRow}>
-                {(['neapolitan', 'savile', 'milanese'] as TailoringCut[]).map((cut) => {
+                {(['neapolitan', 'savile', 'milanese', 'parisian'] as TailoringCut[]).map((cut) => {
                   const cutName = p.sections.physique.tailoringCuts[cut];
                   const isActive = tailoringCut === cut;
                   return (
@@ -120,7 +125,7 @@ export default function ProfilePage() {
             </div>
 
             <div className={styles.toneGrid}>
-              {(['olive', 'alabaster', 'bronze', 'honey'] as Tone[]).map((tKey) => {
+              {(['olive', 'alabaster', 'bronze', 'honey', 'ebony'] as Tone[]).map((tKey) => {
                 const toneInfo = p.sections.chromatic.tones[tKey];
                 const swatch = TONE_SWATCHES[tKey];
                 const isActive = tone === tKey;
@@ -152,7 +157,7 @@ export default function ProfilePage() {
             </div>
 
             <div className={styles.archetypeGrid}>
-              {(['sprezzatura', 'savile', 'quietLuxury', 'vanguard'] as Archetype[]).map((arch) => {
+              {(['sprezzatura', 'savile', 'quietLuxury', 'vanguard', 'avantGarde'] as Archetype[]).map((arch) => {
                 const info = p.sections.archetype.types[arch];
                 const isActive = archetype === arch;
                 return (
@@ -166,7 +171,7 @@ export default function ProfilePage() {
                       <div className={styles.archetypeHeader}>
                         <span className={styles.archetypeName}>{info.name}</span>
                         <span className={styles.archetypeBadge}>
-                          {arch === 'sprezzatura' ? 'Italy' : arch === 'savile' ? 'London' : arch === 'quietLuxury' ? 'Paris' : 'Milano'}
+                          {arch === 'sprezzatura' ? 'Italy' : arch === 'savile' ? 'London' : arch === 'quietLuxury' ? 'Paris' : arch === 'avantGarde' ? 'Antwerp' : 'Milano'}
                         </span>
                       </div>
                       <p className={styles.archetypeDesc}>{info.desc}</p>
@@ -187,7 +192,7 @@ export default function ProfilePage() {
             <div className={styles.subGroup}>
               <label className={styles.subLabel}>{p.sections.environment.climates.label}</label>
               <div className={styles.pillRow}>
-                {(['temperate', 'mediterranean', 'crisp'] as Climate[]).map((cKey) => {
+                {(['temperate', 'mediterranean', 'crisp', 'tropical'] as Climate[]).map((cKey) => {
                   const label = p.sections.environment.climates[cKey];
                   const isActive = climate === cKey;
                   return (
@@ -207,7 +212,7 @@ export default function ProfilePage() {
             <div className={styles.subGroup} style={{ marginTop: '20px' }}>
               <label className={styles.subLabel}>{p.sections.environment.settings.label}</label>
               <div className={styles.pillRow}>
-                {(['executive', 'creative', 'traveler'] as Setting[]).map((sKey) => {
+                {(['executive', 'creative', 'traveler', 'gala'] as Setting[]).map((sKey) => {
                   const label = p.sections.environment.settings[sKey];
                   const isActive = setting === sKey;
                   return (
@@ -215,6 +220,54 @@ export default function ProfilePage() {
                       key={sKey}
                       type="button"
                       onClick={() => setSetting(sKey)}
+                      className={`${styles.pill} ${isActive ? styles.activePill : ''}`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Accoutrements */}
+          <section className={styles.card}>
+            <div className={styles.cardHeader}>
+              <h2 className={styles.cardTitle}>{p.sections.accoutrements?.title || '5. Accoutrements'}</h2>
+              <p className={styles.cardDesc}>{p.sections.accoutrements?.desc || 'Details and accessories.'}</p>
+            </div>
+
+            <div className={styles.subGroup}>
+              <label className={styles.subLabel}>{p.sections.accoutrements?.footwear?.label || 'Footwear'}</label>
+              <div className={styles.pillRow}>
+                {(['oxford', 'loafer', 'boot', 'sneaker'] as Footwear[]).map((fKey) => {
+                  const label = p.sections.accoutrements?.footwear?.[fKey] || fKey;
+                  const isActive = footwear === fKey;
+                  return (
+                    <button
+                      key={fKey}
+                      type="button"
+                      onClick={() => setFootwear(fKey)}
+                      className={`${styles.pill} ${isActive ? styles.activePill : ''}`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className={styles.subGroup} style={{ marginTop: '20px' }}>
+              <label className={styles.subLabel}>{p.sections.accoutrements?.accessories?.label || 'Accessories'}</label>
+              <div className={styles.pillRow}>
+                {(['vintage', 'modern', 'bold', 'none'] as Accessory[]).map((aKey) => {
+                  const label = p.sections.accoutrements?.accessories?.[aKey] || aKey;
+                  const isActive = accessory === aKey;
+                  return (
+                    <button
+                      key={aKey}
+                      type="button"
+                      onClick={() => setAccessory(aKey)}
                       className={`${styles.pill} ${isActive ? styles.activePill : ''}`}
                     >
                       {label}
@@ -286,6 +339,7 @@ export default function ProfilePage() {
                 {archetype === 'savile' && "High-twist wool with clean canvassing and roped shoulders delivers commanding executive authority with razor-sharp drape."}
                 {archetype === 'quietLuxury' && "Tactile cashmere knitwear paired with selvedge denim and suede penny loafers provides understated prestige with ultimate comfort."}
                 {archetype === 'vanguard' && "Monochrome architectural layers with modern sculpted lines produce a cutting-edge aesthetic for the creative visionary."}
+                {archetype === 'avantGarde' && "Dark, brooding textures combined with unconventional draping creates an imposing, avant-garde silhouette."}
               </div>
             </div>
 

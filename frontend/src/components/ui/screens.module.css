@@ -1,0 +1,10 @@
+.page {
+  padding: 24px;
+}
+.header {
+  margin-bottom: 24px;
+}
+.grid {
+  display: grid;
+  gap: 24px;
+}

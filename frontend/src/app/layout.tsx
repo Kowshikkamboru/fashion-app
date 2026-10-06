@@ -2,6 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import CookieBanner from "@/components/CookieBanner";
+
+import { Playfair_Display, Montserrat } from 'next/font/google';
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  variable: '--font-heading',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-body',
+});
 
 export const metadata: Metadata = {
   title: "Vastrié | The Master of Personal Style",
@@ -10,13 +24,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <LanguageProvider>
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-        </LanguageProvider>
+    <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${montserrat.variable}`}>
+      <body suppressHydrationWarning className={`${playfair.variable} ${montserrat.variable}`}>
+        <ThemeProvider>
+          <LanguageProvider>
+            <AuthProvider>
+              {children}
+              <CookieBanner />
+            </AuthProvider>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

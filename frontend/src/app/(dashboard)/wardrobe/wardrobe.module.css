@@ -34,29 +34,28 @@
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent-primary, #d4af37);
+  color: var(--accent-primary);
   font-weight: 700;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: transparent;
+  border: 1px solid var(--accent-primary);
   padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .badgeDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent-primary, #d4af37);
-  box-shadow: 0 0 8px var(--accent-primary, #d4af37);
+  background: var(--accent-primary);
 }
 
 .title {
   font-family: var(--font-heading);
   font-size: 2.75rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
-  color: #fff;
+  color: var(--text-primary);
   line-height: 1.15;
 }
 
@@ -76,11 +75,11 @@
 }
 
 .statCard {
-  background: rgba(18, 18, 22, 0.65);
+  background: var(--bg-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 2px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -104,12 +103,12 @@
 .statValue {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 800;
-  color: #fff;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .statValueGold {
-  color: var(--accent-primary, #d4af37);
+  color: var(--accent-primary);
 }
 
 .statSubtext {
@@ -136,11 +135,11 @@
 
 .searchInput {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: var(--bg-glass-border);
+  border: 1px solid var(--bg-glass-border);
+  color: var(--text-primary);
   padding: 12px 18px 12px 42px;
-  border-radius: 30px;
+  border-radius: 2px;
   font-size: 0.9rem;
   outline: none;
   transition: all 0.3s ease;
@@ -148,7 +147,7 @@
 
 .searchInput:focus {
   border-color: var(--accent-primary, #d4af37);
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--bg-glass-border);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
@@ -165,23 +164,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #d4af37 0%, #b8972e 100%);
-  color: #000;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
   font-weight: 700;
   font-size: 0.9rem;
   padding: 12px 24px;
-  border-radius: 30px;
-  border: none;
+  border-radius: 0px;
+  border: 1px solid var(--accent-primary);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
   white-space: nowrap;
 }
 
 .addBtn:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #f2ce55 0%, #d4af37 100%);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+  background: transparent; 
+  color: var(--accent-primary);
 }
 
 /* Category Filter Pills */
@@ -199,11 +196,11 @@
 }
 
 .filterBtn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: var(--bg-glass-border);
+  border: 1px solid var(--bg-glass-border);
   color: var(--text-secondary, #a1a1aa);
   padding: 8px 18px;
-  border-radius: 20px;
+  border-radius: 2px;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -212,16 +209,15 @@
 }
 
 .filterBtn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-glass-border);
+  color: var(--text-primary);
+  border-color: var(--bg-glass-border);
 }
 
 .activeFilter {
-  background: rgba(212, 175, 55, 0.16);
-  border-color: var(--accent-primary, #d4af37);
-  color: var(--accent-primary, #d4af37);
-  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 /* Garment Grid */
@@ -232,29 +228,29 @@
 }
 
 .card {
-  background: rgba(18, 18, 22, 0.7);
+  background: var(--bg-glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 2px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-medium);
 }
 
 .card:hover {
   transform: translateY(-5px);
   border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.1);
+  box-shadow: var(--shadow-heavy);
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
-  background: #08080a;
+  background: var(--bg-secondary);
   overflow: hidden;
 }
 
@@ -271,31 +267,26 @@
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-size: 0.725rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 6px 10px;
+  border-radius: 0px;
 }
 
 .matchTag {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: rgba(212, 175, 55, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  color: var(--accent-primary, #d4af37);
+  background: var(--bg-primary);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
   font-size: 0.725rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 6px 10px;
+  border-radius: 0px;
 }
 
 .cardBody {
@@ -318,7 +309,7 @@
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 6px;
   line-height: 1.3;
 }
@@ -345,7 +336,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.775rem;
-  color: #ccc;
+  color: var(--text-secondary);
 }
 
 .colorDot {
@@ -357,20 +348,20 @@
 
 .seasonPill {
   font-size: 0.725rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #aaa;
+  background: transparent;
+  border: 1px solid var(--bg-glass-border);
+  color: var(--text-secondary);
   padding: 3px 8px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .cardActionBtn {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: var(--bg-glass-border);
+  border: 1px solid var(--bg-glass-border);
+  color: var(--text-primary);
   padding: 10px 16px;
-  border-radius: 12px;
+  border-radius: 2px;
   font-size: 0.825rem;
   font-weight: 600;
   cursor: pointer;
@@ -383,9 +374,9 @@
 }
 
 .cardActionBtn:hover {
-  background: rgba(212, 175, 55, 0.15);
-  border-color: var(--accent-primary, #d4af37);
-  color: var(--accent-primary, #d4af37);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 /* Modal Overlay */
@@ -407,26 +398,26 @@
 }
 
 .modalContent {
-  background: #0f0f14;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  border-radius: 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 0px;
   max-width: 540px;
   width: 100%;
   padding: 32px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.15);
+  box-shadow: var(--shadow-heavy);
 }
 
 .modalHeader {
   margin-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--bg-glass-border);
   padding-bottom: 16px;
 }
 
 .modalTitle {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 800;
-  color: #fff;
+  font-weight: 500;
+  color: var(--text-primary);
   margin-bottom: 6px;
 }
 
@@ -452,11 +443,11 @@
 
 .formInput, .formSelect {
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: var(--bg-glass-border);
+  border: 1px solid var(--bg-glass-border);
+  color: var(--text-primary);
   padding: 10px 14px;
-  border-radius: 10px;
+  border-radius: 2px;
   font-size: 0.9rem;
   outline: none;
 }
@@ -480,10 +471,10 @@
 
 .cancelBtn {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ccc;
+  border: 1px solid var(--bg-glass-border);
+  color: var(--text-secondary);
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 0px;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -491,24 +482,23 @@
 }
 
 .cancelBtn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: var(--bg-glass-border);
+  color: var(--text-primary);
 }
 
 .submitBtn {
-  background: linear-gradient(135deg, #d4af37 0%, #b8972e 100%);
-  color: #000;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
   padding: 10px 22px;
-  border-radius: 20px;
+  border-radius: 0px;
   font-size: 0.85rem;
   font-weight: 700;
-  border: none;
+  border: 1px solid var(--accent-primary);
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .submitBtn:hover {
-  background: linear-gradient(135deg, #f2ce55 0%, #d4af37 100%);
-  transform: translateY(-1px);
+  background: transparent; 
+  color: var(--accent-primary);
 }

@@ -1,32 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
 :root {
-  --bg-primary: #050507;
-  --bg-secondary: #0f0f13;
-  --bg-glass: rgba(15, 15, 19, 0.6);
-  --bg-glass-border: rgba(255, 255, 255, 0.08);
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #121214;
+  --bg-glass: rgba(18, 18, 20, 0.9);
+  --bg-glass-border: rgba(255, 255, 255, 0.05);
   
   --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
   
-  --accent-primary: #d4af37; /* Premium Gold */
-  --accent-hover: #f2ce55;
+  --accent-primary: #c4b59c; /* Sophisticated Taupe/Beige */
+  --accent-hover: #e8e2d5;
   --accent-glow: rgba(212, 175, 55, 0.4);
   
-  --ai-primary: #8b5cf6; /* Vibrant Purple/Blue for AI */
-  --ai-glow: rgba(139, 92, 246, 0.4);
+  --ai-primary: #ffffff; /* AI is just pristine white in luxury mode */
+  --ai-glow: rgba(255, 255, 255, 0.3);
 
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: var(--font-heading), 'Playfair Display', serif;
+  --font-body: var(--font-body), 'Montserrat', sans-serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  --radial-glow: rgba(212, 175, 55, 0.05);
+  --input-bg: rgba(0, 0, 0, 0.2);
+  
+  --shadow-heavy: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 175, 55, 0.1);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #fcfcfc;
+  --bg-secondary: #f4f4f4;
+  --bg-glass: rgba(255, 255, 255, 0.95);
+  --bg-glass-border: rgba(0, 0, 0, 0.06);
+  
+  --text-primary: #1a1a1a;
+  --text-secondary: #5a5a6a;
+  
+  --accent-primary: #9c8356; /* Deeper Bronze/Gold for better contrast on white */
+  --accent-hover: #7a6642;
+  --accent-glow: rgba(156, 131, 86, 0.3);
+  
+  --ai-primary: #111111;
+  --ai-glow: rgba(0, 0, 0, 0.2);
+  
+  --radial-glow: rgba(255, 255, 255, 0.8);
+  --input-bg: rgba(255, 255, 255, 0.5);
+  
+  --shadow-heavy: 0 24px 60px rgba(0, 0, 0, 0.06), 0 0 35px rgba(212, 175, 55, 0.08);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -41,7 +69,8 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   margin: 0;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 a {
@@ -49,14 +78,12 @@ a {
   color: inherit;
 }
 
-/* Glassmorphism Utilities */
+/* Solid Elegant Panels (No Glass) */
 .glass-panel {
-  background: var(--bg-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--bg-secondary);
   border: 1px solid var(--bg-glass-border);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 0px;
+  box-shadow: none;
 }
 
 /* Buttons */

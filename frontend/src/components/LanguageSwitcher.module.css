@@ -1,14 +1,14 @@
 .switcherContainer {
   display: inline-flex;
   align-items: center;
-  background: rgba(18, 18, 18, 0.65);
+  background: var(--bg-glass);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 0px;
   padding: 3px;
   gap: 2px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
 }
 
 .langBtn {
@@ -19,27 +19,37 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
+  color: var(--text-secondary);
+  border-radius: 0px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.langBtn:hover {
-  color: #ffffff;
+.langBtn:hover:not(.active) {
+  color: var(--text-primary);
 }
 
-.active {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.1) 100%);
-  color: var(--accent-primary, #d4af37);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+/* Default (Dark Mode) */
+.active, .active:hover, .langBtn.active:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Light Mode */
+:global(html[data-theme="light"]) .active,
+:global(html[data-theme="light"]) .active:hover,
+:global(html[data-theme="light"]) .langBtn.active:hover {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+  border: 1px solid #1a1a1a !important;
 }
 
 .divider {
   width: 1px;
   height: 10px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--bg-glass-border);
 }
